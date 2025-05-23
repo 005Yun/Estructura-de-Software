@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foro - Learnsity</title>
+  <link rel="stylesheet" href="foro.css">
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.foro-sidebar');
+      const content = document.querySelector('.foro-content');
+      const courseTitles = document.querySelectorAll('.foro-sidebar ul li');
+
+      sidebar.classList.toggle('collapsed');
+      content.classList.toggle('expanded');
+
+      courseTitles.forEach(li => {
+        if (sidebar.classList.contains('collapsed')) {
+          li.innerHTML = '📘';
+        } else {
+          li.innerHTML = li.getAttribute('data-fulltext');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const courseItems = document.querySelectorAll('.foro-sidebar ul li');
+      courseItems.forEach(li => {
+        li.setAttribute('data-fulltext', li.innerHTML);
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="foro-header">
+    <img src="image1.jpg" alt="Logo de Learnsity">
+    <div class="nav-bar">
+      <button onclick="location.href='index.html'">Explorar Cursos</button>
+      <button class="active">Foro</button>
+      <button>Mis Cursos</button>
+      <button>Mi Perfil</button>
+    </div>
+  </header>
+
+  <main class="foro-main">
+    <aside class="foro-sidebar">
+      <h3>MIS CURSOS</h3>
+      <ul>
+        <li>📘 Fundamentos de Python</li>
+        <li class="active">📘 Base de Datos II</li>
+        <li>📘 Inteligencia Artificial</li>
+        <li>📘 Java para principiantes</li>
+        <li>📘 Enrutamiento y redes</li>
+        <li>📘 IA con Python y más</li>
+      </ul>
+      <div class="collapse-toggle" onclick="toggleSidebar()">««</div>
+    </aside>
+
+    <section class="foro-content">
+      <header class="foro-header-section">
+        <h2>📢 BIENVENIDO AL FORO</h2>
+        <div class="user-info">
+          <span>USUARIO: <strong>@Doro3000</strong></span>
+          <img src="image8.jpg" alt="Avatar de usuario">
+        </div>
+      </header>
+
+      <div class="foro-post">
+        <h3>Curso: Base de Datos II</h3>
+        <nav class="unidad-tabs">
+          <button>Unidad I</button>
+          <button>Unidad II</button>
+          <button>Unidad III</button>
+          <button class="active">Unidad IV</button>
+        </nav>
+
+        <article class="foro-article">
+          <h4>Recuerda:</h4>
+          <p>
+            En general, usamos <strong>sistemas gestores de bases de datos (SGBD)</strong>
+            como SQL Server, MySQL, PostgreSQL, Oracle, entre otros para interactuar con nuestras bases de datos... 
+            <br><br>
+            Existen <strong>modelos de bases de datos</strong> como el relacional que permite relacionar tablas... 
+          </p>
+
+          <div class="foro-feedback">
+            <span>💬 197</span>
+            <span>💡 890</span>
+            <span>🔄 61</span>
+            <span>📚 1334</span>
+          </div>
+
+          <div class="foro-comentario">
+            <img src="image9.jpg" alt="avatar">
+            <p><strong>@Doro3000</strong><br>
+            Me pareció muy interesante lo que mencionó el profesor sobre la importancia de diseñar bien una base de datos...</p>
+            <div class="comentario-feedback">💬 12 👍 34 ⚠️</div>
+          </div>
+
+          <div class="foro-comentario">
+            <img src="image10.jpg" alt="avatar">
+            <p><strong>@arisuuwu_dev</strong><br>
+            -.- que xddd.</p>
+            <div class="comentario-feedback">💬 1 👍 0 ⚠️</div>
+          </div>
+
+          <div class="foro-comentario">
+            <img src="image11.jpg" alt="avatar">
+            <p><strong>@momichilover1123</strong><br>
+            so</p>
+            <div class="comentario-feedback">💬 1 👍 0 ⚠️</div>
+          </div>
+
+          <div class="foro-input">
+            <input type="text" placeholder="Inserte un comentario...">
+            <button>GIF</button>
+            <button>😊</button>
+            <button>📤</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
