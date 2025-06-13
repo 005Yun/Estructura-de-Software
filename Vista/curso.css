@@ -1,0 +1,113 @@
+/* curso.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+  }
+  
+  .curso-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .sidebar {
+    width: 240px;
+    background-color: #444;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar button,
+  .sidebar .cert-btn,
+  .sidebar .nav-icon {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .sidebar button:hover,
+  .sidebar .cert-btn:hover,
+  .sidebar .nav-icon:hover {
+    background-color: #ddd;
+  }
+  
+  .sidebar img.cert-img {
+    width: 90%;
+    margin: 15px 0;
+  }
+  
+  .content-area {
+    flex: 1;
+    padding: 30px;
+    background-color: #111;
+  }
+  
+  .video-section {
+    margin-bottom: 40px;
+  }
+  
+  .video-section h2,
+  .video-section h3 {
+    margin: 0 0 10px;
+  }
+  
+  video {
+    width: 100%;
+    border: 2px solid #3399ff;
+    border-radius: 4px;
+  }
+  
+  .comments-section h3 {
+    margin-bottom: 20px;
+  }
+  
+  .comment-box {
+    background-color: #666;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .comment-box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .comment-box input,
+  .comment-box textarea {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    resize: none;
+  }
+  
+  .comment-box textarea {
+    height: 60px;
+  }
+  
+  /* Icon buttons */
+  .sidebar .nav-icon {
+    justify-content: center;
+    font-size: 18px;
+  }
+  
+  .sidebar .nav-icon span {
+    margin-left: 10px;
+  }
