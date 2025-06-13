@@ -11,7 +11,7 @@
   }
   
   header {
-    background-color: #f8f8f8;
+    background-color: #EBEBEB;
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
   }
   
   header img {
-    height: 40px;
+    height: 80px;
   }
   
   .search-container {
